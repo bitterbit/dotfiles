@@ -16,6 +16,7 @@ Plugin 'altercation/vim-colors-solarized'
 " code enchancments
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " javascript
 Plugin 'jelera/vim-javascript-syntax' 	" color syntax
@@ -25,8 +26,14 @@ Plugin 'Raimondi/delimitMate' 		" close brakets
 " react js
 Plugin 'mxw/vim-jsx'
 
-let g:syntastic_check_on_open=1 " syntastic lint file also on open and not only on close or save
-let g:jsx_ext_required = 0 	" allow JSX in normal JS files
+" syntax
+let g:syntastic_check_on_open=1                     " syntastic lint file also on open and not only on close or save
+let g:jsx_ext_required = 0 	                    " allow JSX in normal JS files
+let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and not jshint) for better jsx 
+
+" shortcuts
+nmap ,f :CtrlP<CR>
+
 
 " indentation
 set expandtab
