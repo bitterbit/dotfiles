@@ -8,14 +8,13 @@ call vundle#begin()
 
 " our plugins
 Plugin 'gmarik/Vundle.vim'       
+
+" colors
 Plugin 'flazz/vim-colorschemes' 
 Plugin 'altercation/vim-colors-solarized'
 
-" syntastic
+" code enchancments
 Plugin 'scrooloose/syntastic'
-let g:syntastic_check_on_open=1 " lint file also on open and not only on close or save
-
-
 Plugin 'Valloric/YouCompleteMe'
 
 " javascript
@@ -26,20 +25,23 @@ Plugin 'Raimondi/delimitMate' 		" close brakets
 " react js
 " Plugin 'mxw/vim-jsx'
 
+" syntastic lint file also on open and not only on close or save
+let g:syntastic_check_on_open=1 
+
 " indentation
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 " colors
 syntax on
 set background=dark
 " colorscheme distinguished
 " colorscheme solarized
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
