@@ -8,8 +8,11 @@ call vundle#begin()
 " our plugins
 Plugin 'gmarik/Vundle.vim'       
 Plugin 'flazz/vim-colorschemes' 
+Plugin 'altercation/vim-colors-solarized'
 
 " colors
-" colorscheme wombat256
+syntax enable
+set background=dark
+" colorscheme solarized
 
 
