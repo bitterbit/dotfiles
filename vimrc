@@ -11,6 +11,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes' 
 Plugin 'altercation/vim-colors-solarized'
 
+" syntastic
+Plugin 'scrooloose/syntastic'
+let g:syntastic_check_on_open=1 " lint file also on open and not only on close or save
+
 " javascript
 Plugin 'jelera/vim-javascript-syntax' 	" color syntax
 Plugin 'pangloss/vim-javascript' 	" tabs
