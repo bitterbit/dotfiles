@@ -23,10 +23,10 @@ Plugin 'pangloss/vim-javascript' 	" tabs
 Plugin 'Raimondi/delimitMate' 		" close brakets
 
 " react js
-" Plugin 'mxw/vim-jsx'
+Plugin 'mxw/vim-jsx'
 
-" syntastic lint file also on open and not only on close or save
-let g:syntastic_check_on_open=1 
+let g:syntastic_check_on_open=1 " syntastic lint file also on open and not only on close or save
+let g:jsx_ext_required = 0 	" allow JSX in normal JS files
 
 " indentation
 set expandtab
