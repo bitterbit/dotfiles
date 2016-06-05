@@ -57,6 +57,10 @@ plugins=(git)
 # User configuration
 
   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+  export GOPATH="/home/gal/code/go"
+  export PATH=$PATH:/usr/local/go/bin
+  export PATH=$PATH:$GOPATH/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
