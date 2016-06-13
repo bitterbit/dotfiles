@@ -3,18 +3,23 @@
 
 # Install zshell and tmux
 if [ "$(uname)" == "Darwin" ]; then
-    brew install zsh tmux
+    brew install vim zsh tmux
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     if [ -n "$(command -v yum)" ]; then
-        yum install zsh tmux
+        yum install vim zsh tmux
     elif [ -n "$(command -v apt-get)" ];  then
-        apt-get install zsh tmux
+        apt-get install vim zsh tmux
     fi
 fi
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # Create shortcuts to our dotfiles
+rm ~/.vimrc ~/.zshrc ~/.tmux.conf
+
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
 vim +PluginInstall +qall
