@@ -9,6 +9,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         yum install vim zsh tmux
     elif [ -n "$(command -v apt-get)" ];  then
         apt-get install vim zsh tmux
+    elif [ -n "$(command -v zypper)" ];  then
+        zypper install vim zsh tmux
     fi
 fi
 
