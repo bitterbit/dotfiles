@@ -8,9 +8,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     if [ -n "$(command -v yum)" ]; then
         yum install vim zsh tmux
     elif [ -n "$(command -v apt-get)" ];  then
-        apt-get install vim zsh tmux
+        apt-get install vim zsh tmux exuberant-ctags
     elif [ -n "$(command -v zypper)" ];  then
-        zypper install vim zsh tmux
+        zypper install vim zsh tmux ctags
     fi
 fi
 

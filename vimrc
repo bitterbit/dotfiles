@@ -15,8 +15,12 @@ Plugin 'altercation/vim-colors-solarized'
 
 " code enchancments
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'joonty/vim-taggatron'
 
 " javascript
 Plugin 'jelera/vim-javascript-syntax' 	" color syntax
@@ -33,6 +37,14 @@ let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and 
 
 " shortcuts
 nmap ,f :CtrlP<CR>
+map <C-n> :NERDTreeToggle<CR>
+
+" NERDTree onload
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Auto complete trigger on tab
+let g:SuperTabDefaultCompletionType = ""
 
 
 " indentation
@@ -51,4 +63,22 @@ set background=dark
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" PHP
+command PHPCtags execute ":call RefreshPHPCtags()"
 
+fun! RefreshPHPCtags()
+    execute '!ctags -f php.tags --languages=PHP -R'
+    set tags=php.tags
+endfun
+
+" go to defn of tag under the cursor
+fun! MatchCaseTag()
+    let ic = &ic
+    set noic
+        try
+            exe 'tjump ' . expand('<cword>')
+        finally
+               let &ic = ic
+        endtry
+endfun
+nnoremap <silent> <F12> :call MatchCaseTag()<CR>
