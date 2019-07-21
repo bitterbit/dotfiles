@@ -46,6 +46,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Auto complete trigger on tab
 let g:SuperTabDefaultCompletionType = ""
 
+" No text wrapping
+set nowrap
 
 " indentation
 set expandtab
@@ -62,6 +64,8 @@ set background=dark
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+colorscheme dracula
 
 " PHP
 command PHPCtags execute ":call RefreshPHPCtags()"

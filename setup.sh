@@ -4,6 +4,7 @@
 # Install zshell and tmux
 if [ "$(uname)" == "Darwin" ]; then
     brew install vim zsh tmux
+    brew install binutils
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     if [ -n "$(command -v yum)" ]; then
         yum install vim zsh tmux

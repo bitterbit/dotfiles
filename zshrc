@@ -8,7 +8,7 @@ export ZSH=~/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="nicoulaj"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,9 +58,12 @@ plugins=(git)
 
   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-  export GOPATH="/home/gal/code/go"
+  export GOPATH="$HOME/dev/go"
+  export GOBIN="$HOME/bin"
   export PATH=$PATH:/usr/local/go/bin
   export PATH=$PATH:$GOPATH/bin
+  export PATH=$PATH:"$HOME/Library/Android/sdk/platform-tools"
+  export PATH=$PATH:"/usr/local/opt/binutils/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
   source $ZSH/oh-my-zsh.sh
@@ -77,6 +80,21 @@ plugins=(git)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+#
+
+export LANG=en_US.UTF-8
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+export PATH=$PATH:/Users/galtashma/bin/
+export PATH=$PATH:/Users/galtashma/Library/Python/2.7/bin
+alias ldd="otool -L"
+alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
