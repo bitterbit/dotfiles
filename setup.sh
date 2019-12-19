@@ -25,6 +25,9 @@ ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 
+# syntax checking for python
+pip3 install flake8 --user
+
 vim +PluginInstall +qall
 
 echo "Done!"
