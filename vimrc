@@ -35,7 +35,7 @@ let g:syntastic_check_on_open=1                     " syntastic lint file also o
 let g:jsx_ext_required = 0 	                    " allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and not jshint) for better jsx 
 let g:syntastic_python_checkers = ['flake8']
-et g:syntastic_python_flake8_args='--ignore=E501'   " ignore error line too long
+let g:syntastic_python_flake8_args='--ignore=E501'   " ignore error line too long
 
 
 
