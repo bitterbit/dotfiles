@@ -3,6 +3,11 @@ if [ "$TERM" = xterm ]; then TERM=xterm-256color; fi
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# fix tilda and ± mixup in ubuntu vm and mac host
+# doesnt work in init for some reason, just save this 
+# snippet here for later need
+setxkbmap -option apple:badmaps
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -64,6 +69,7 @@ plugins=(git)
   export PATH=$PATH:$GOPATH/bin
   export PATH=$PATH:"$HOME/Library/Android/sdk/platform-tools"
   export PATH=$PATH:"/usr/local/opt/binutils/bin"
+  export PATH=$PATH:"$HOME/.local/bin/"
 # export MANPATH="/usr/local/man:$MANPATH"
 
   source $ZSH/oh-my-zsh.sh
