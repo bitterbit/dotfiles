@@ -97,8 +97,8 @@ export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-export PATH=$PATH:/Users/galtashma/bin/
-export PATH=$PATH:/Users/galtashma/Library/Python/2.7/bin
+export PATH=$PATH:$HOME/bin/
+export PATH=$PATH:$HOME/Library/Python/2.7/bin
 alias ldd="otool -L"
 alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"
 
