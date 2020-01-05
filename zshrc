@@ -6,7 +6,7 @@ export ZSH=~/.oh-my-zsh
 # fix tilda and ± mixup in ubuntu vm and mac host
 # doesnt work in init for some reason, just save this 
 # snippet here for later need
-setxkbmap -option apple:badmaps
+# setxkbmap -option apple:badmaps
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/

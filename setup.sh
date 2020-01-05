@@ -18,7 +18,7 @@ fi
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Create shortcuts to our dotfiles
-rm ~/.vimrc ~/.zshrc ~/.tmux.conf
+rm -f ~/.vimrc ~/.zshrc ~/.tmux.conf
 
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/zshrc ~/.zshrc
