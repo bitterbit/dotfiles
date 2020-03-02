@@ -62,6 +62,7 @@ plugins=(git)
   export PATH=$PATH:/usr/local/go/bin
   export PATH=$PATH:$GOPATH/bin
 # export MANPATH="/usr/local/man:$MANPATH"
+  export PATH=$PATH:$HOME/bin
 
   source $ZSH/oh-my-zsh.sh
 
