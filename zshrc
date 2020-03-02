@@ -70,7 +70,7 @@ plugins=(git)
 
   if [ -z "$TMUX" ]
   then
-    tmux attach -t TMUX || tmux new -s TMUX
+    tmux -u attach -t TMUX || tmux -u new -s TMUX
   fi
 
 
