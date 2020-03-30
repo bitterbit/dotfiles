@@ -18,7 +18,7 @@ fi
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install zsh typewritter theme
-git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
+git clone git@github.com:bitterbit/typewritten.git $ZSH_CUSTOM/themes/typewritten
 ln -s "$ZSH_CUSTOM/themes/typewritten/typewritten.zsh-theme" "$ZSH_CUSTOM/themes/typewritten.zsh-theme"
 
 # Create shortcuts to our dotfiles
