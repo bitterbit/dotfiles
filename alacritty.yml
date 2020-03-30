@@ -1,6 +1,6 @@
-font:
-    regular:
-        family: SF Mono
+# font:
+#    regular:
+#        family: SF Mono
 
 
 # Colors (Snazzy)
@@ -25,7 +25,7 @@ colors:
   bright:
     black:   '0x7f8c98' # Comments color
     red:     '0xd46a97'
-    green:   '0x1C1D21' # NerdTREE seperator, also TODO background
+    green:   '0x253236' # NerdTREE seperator, also TODO background
     yellow:  '0x626e82' # text highlight color!
     blue:    '0x9bd2e2'
     magenta: '0xff7ab2'
