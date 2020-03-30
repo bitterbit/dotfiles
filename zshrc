@@ -14,9 +14,7 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 # ZSH_THEME="nicoulaj"
-ZSH_THEME="typewritten"
-# ZSH_THEME="elessar"
-# ZSH_THEME="hyperzsh"
+ZSH_THEME="typewritten" # https://github.com/reobin/typewritten
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
