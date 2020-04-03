@@ -21,6 +21,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'joonty/vim-taggatron'
+Plugin 'tpope/vim-commentary'
+
+" line numbers
+Plugin 'ericbn/vim-relativize'
+set relativenumber
 
 " javascript
 Plugin 'jelera/vim-javascript-syntax' 	" color syntax
@@ -30,6 +35,7 @@ Plugin 'Raimondi/delimitMate' 		" close brakets
 " react js
 Plugin 'mxw/vim-jsx'
 
+" current theme
 Plugin 'arzg/vim-colors-xcode'
 
 " syntax
@@ -47,6 +53,7 @@ let g:syntastic_python_flake8_args='--ignore=E501,E402,F403,F405,E302,E305,E261,
 " E731 - dont use lambdas
 
 
+" NERDTree ignore files
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__
 let NERDTreeRespectWildIgnore=1
 
@@ -73,15 +80,15 @@ set softtabstop=4
 " colors
 syntax on
 set background=dark
-" colorscheme distinguished
-" colorscheme solarized
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme xcode 
+
+" fix xcode colorscheme matching parentheses color
+hi MatchParen guifg=200 guibg=100 cterm=NONE
 
 " PHP
 command PHPCtags execute ":call RefreshPHPCtags()"
@@ -101,4 +108,8 @@ fun! MatchCaseTag()
                let &ic = ic
         endtry
 endfun
+
 nnoremap <silent> <F12> :call MatchCaseTag()<CR>
+
+" fix matching parentheses color highlighting
+hi MatchParen ctermfg=254 ctermbg=6 cterm=NONE
