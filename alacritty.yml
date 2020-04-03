@@ -1,0 +1,33 @@
+# font:
+#    regular:
+#        family: SF Mono
+
+
+# Colors (Snazzy)
+colors:
+  # Default colors
+  primary:
+    background: '0x1C1D21'
+    foreground: '0xdfdfe0'
+
+  # Normal colors
+  normal:
+    black:   '0x1C1D21'
+    red:     '0xd46a97' # looks pink~purplish
+    green:   '0x78c2b3' # Strings 
+    yellow:  '0xd9c97c'
+    blue:    '0x83c7db' 
+    magenta: '0xff7ab2'
+    cyan:    '0xb281eb' # Purple
+    white:   '0xdfdfe0' # Normal text color
+
+  # Bright colors
+  bright:
+    black:   '0x7f8c98' # Comments color
+    red:     '0xd46a97'
+    green:   '0x253236' # NerdTREE seperator, also TODO background
+    yellow:  '0x626e82' # text highlight color!
+    blue:    '0x9bd2e2'
+    magenta: '0xff7ab2'
+    cyan:    '0xb281eb' # LS Purple
+    white:   '0xdfdfe0'
