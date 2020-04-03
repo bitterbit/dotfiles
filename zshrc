@@ -64,7 +64,7 @@ plugins=(git)
 
   export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-  export GOPATH="$HOME/dev/go"
+  export GOPATH="$HOME/code/go"
   export GOBIN="$HOME/bin"
   export PATH=$PATH:/usr/local/go/bin
   export PATH=$PATH:$GOPATH/bin
@@ -131,3 +131,6 @@ alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacO
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# added by travis gem
+[ -f /Users/gal/.travis/travis.sh ] && source /Users/gal/.travis/travis.sh
