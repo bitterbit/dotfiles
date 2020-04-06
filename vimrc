@@ -111,5 +111,11 @@ endfun
 
 nnoremap <silent> <F12> :call MatchCaseTag()<CR>
 
+" disable relative line numbers on F3
+nnoremap <silent> <F3> :let [&number, &relativenumber] =
+  \ [!&number && (g:relativize_with_number \|\| !g:relativize_enabled),
+  \ !&relativenumber && g:relativize_enabled]<CR>
+
+
 " fix matching parentheses color highlighting
 hi MatchParen ctermfg=254 ctermbg=6 cterm=NONE
