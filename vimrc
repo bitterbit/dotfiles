@@ -90,8 +90,6 @@ filetype plugin indent on    " required
 
 colorscheme xcode 
 
-" fix xcode colorscheme matching parentheses color
-hi MatchParen guifg=200 guibg=100 cterm=NONE
 
 " PHP
 command PHPCtags execute ":call RefreshPHPCtags()"
@@ -120,5 +118,5 @@ nnoremap <silent> <F3> :let [&number, &relativenumber] =
   \ !&relativenumber && g:relativize_enabled]<CR>
 
 
-" fix matching parentheses color highlighting
+" fix xcode colorscheme matching parentheses color
 hi MatchParen ctermfg=254 ctermbg=6 cterm=NONE
