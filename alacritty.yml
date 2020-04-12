@@ -7,15 +7,15 @@
 colors:
   # Default colors
   primary:
-    background: '0x1C1D21'
-    foreground: '0xdfdfe0'
+    background: '0x1C1D21' # Background 
+    foreground: '0xdfdfe0' # White
 
   # Normal colors
   normal:
-    black:   '0x1C1D21'
+    black:   '0x1C1D21' # Background in vim 
     red:     '0xd46a97' # looks pink~purplish
     green:   '0x78c2b3' # Strings 
-    yellow:  '0xd9c97c'
+    yellow:  '0xd9c97c' # Used in TODO forexample
     blue:    '0x83c7db' 
     magenta: '0xff7ab2'
     cyan:    '0xb281eb' # Purple
@@ -27,7 +27,7 @@ colors:
     red:     '0xd46a97'
     green:   '0x253236' # NerdTREE seperator, also TODO background
     yellow:  '0x626e82' # text highlight color!
-    blue:    '0x9bd2e2'
+    blue:    '0x9bd2e2' # Light blue
     magenta: '0xff7ab2'
     cyan:    '0xb281eb' # LS Purple
     white:   '0xdfdfe0'
