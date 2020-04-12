@@ -27,6 +27,9 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ericbn/vim-relativize'
 set relativenumber
 
+Plugin 'aserebryakov/vim-todo-lists' " 'TODO' mode
+let g:VimTodoListsMoveItems = 0      " dont move done items to bottom
+
 " javascript
 Plugin 'jelera/vim-javascript-syntax' 	" color syntax
 Plugin 'pangloss/vim-javascript' 	" tabs
