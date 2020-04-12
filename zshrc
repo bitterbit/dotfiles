@@ -106,6 +106,7 @@ export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PATH=$PATH:$HOME/Library/Python/3.7/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/29.0.2
+export PATH=${PATH}:$HOME/.cargo/bin
 
 alias ldd="otool -L"
 alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"
