@@ -110,6 +110,7 @@ export PATH=${PATH}:$HOME/.cargo/bin
 
 alias ldd="otool -L"
 alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"
+alias tldr="$(which tldr) -s"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
