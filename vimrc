@@ -46,15 +46,7 @@ let g:syntastic_check_on_open=1                     " syntastic lint file also o
 let g:jsx_ext_required = 0 	                    " allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and not jshint) for better jsx 
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501,E402,F403,F405,E302,E305,E261,E731'   " ignore error line too long
-" E501 - line too long
-" E402 - import not at top
-" F403 - allow `from A import *`
-" E302 - expected two blank lines between functions
-" E305 - expected two blank after class or function def
-" E261 - at least two spaces before inline comment
-" E731 - dont use lambdas
-
+let g:syntastic_python_flake8_config_file='.flake8'
 
 " NERDTree ignore files
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__
