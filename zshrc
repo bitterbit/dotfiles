@@ -75,5 +75,7 @@ alias tldr="$(which tldr) -s" # https://github.com/isacikgoz/tldr
 
 export EDITOR='vim'
 
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+
 # added by travis gem
 [ -f /Users/gal/.travis/travis.sh ] && source /Users/gal/.travis/travis.sh
