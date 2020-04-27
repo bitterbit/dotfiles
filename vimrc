@@ -48,8 +48,8 @@ let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_config_file='.flake8'
 
-" NERDTree ignore files
-set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__
+" NERDTree and ctrlp ignore files
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__,node_modules
 let NERDTreeRespectWildIgnore=1
 
 
