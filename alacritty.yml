@@ -26,7 +26,7 @@ colors:
   bright:
     black:   '0x7f8c98' # Comments color
     red:     '0xd46a97'
-    green:   '0x253236' # NerdTREE seperator, also TODO background
+    green:   '0x3d3d3d' # NerdTREE seperator, also TODO background
     yellow:  '0x626e82' # text highlight color!
     blue:    '0x9bd2e2' # Light blue
     magenta: '0xff7ab2'
