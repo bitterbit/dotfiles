@@ -30,6 +30,7 @@ plugins=(git)
 
   export GOPATH="$HOME/code/go"
   export GOBIN="$HOME/bin"
+  export PATH=$PATH:/usr/local/bin
   export PATH=$PATH:/usr/local/go/bin
   export PATH=$PATH:$GOPATH/bin
   export PATH=$PATH:"$HOME/Library/Android/sdk/platform-tools"
@@ -37,6 +38,7 @@ plugins=(git)
   export PATH=$PATH:"$HOME/.local/bin/"
 # export MANPATH="/usr/local/man:$MANPATH"
   export PATH=$PATH:$HOME/bin
+  export PATH=$PATH:$HOME/Library/Python/3.8/bin
 
   source $ZSH/oh-my-zsh.sh
 
@@ -79,3 +81,8 @@ export EDITOR='vim'
 
 # added by travis gem
 [ -f /Users/gal/.travis/travis.sh ] && source /Users/gal/.travis/travis.sh
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export NDK=/Users/gal/Library/Android/sdk/ndk/21.0.6113669
+
+source $HOME/.cargo/env
+export PATH="/usr/local/opt/qt/bin:$PATH"
