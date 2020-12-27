@@ -1,3 +1,4 @@
+set shell=/bin/bash " dont use system shell, always use bash
 set term=screen-256color
 set t_Co=256
 
@@ -45,6 +46,10 @@ au BufRead,BufNewFile *.svelte set filetype=svelte
 " current theme
 Plugin 'arzg/vim-colors-xcode'
 
+" Syntax highlight for reduxos/ion
+Plugin 'vmchale/ion-vim'
+
+
 " syntax
 let g:syntastic_check_on_open=1                     " syntastic lint file also on open and not only on close or save
 let g:jsx_ext_required = 0 	                    " allow JSX in normal JS files
@@ -52,8 +57,8 @@ let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_config_file='.flake8'
 
-" NERDTree ignore files
-set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__
+" NERDTree and ctrlp ignore files
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__,node_modules
 let NERDTreeRespectWildIgnore=1
 
 
@@ -75,6 +80,12 @@ set nowrap
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+
+augroup ProjectSetup
+    " ts=tabstop sts=softtabstop sw=shiftwidth
+    au BufRead,BufEnter,BufNewFile /Users/gal/github/vapid/* set ts=2 sts=2 sw=2
+augroup END
+
 
 " colors
 syntax on

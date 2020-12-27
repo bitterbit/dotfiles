@@ -30,6 +30,8 @@ ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/flake8.ini ~/.flake8
 mkdir -p ~/.config/alacritty && ln -s ~/dotfiles/alacritty.yml ~/.config/alacritty/alacritty.yml
+mkdir -p ~/.config/ion && ln -s ~/dotfiles/config.ion ~/.config/ion/initrc
+touch ~/.config/starship.toml
 
 # syntax checking for python
 pip3 install flake8 --user
