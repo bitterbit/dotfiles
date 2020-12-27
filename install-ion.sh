@@ -14,3 +14,6 @@ sudo make update-shells prefix=/usr/local
 
 cd -
 rm -rf $TMPDIR
+
+# nice shell prompt
+cargo install starship
