@@ -77,6 +77,12 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
+augroup ProjectSetup
+    " ts=tabstop sts=softtabstop sw=shiftwidth
+    au BufRead,BufEnter,BufNewFile /Users/gal/github/vapid/* set ts=2 sts=2 sw=2
+augroup END
+
+
 " colors
 syntax on
 set background=dark
