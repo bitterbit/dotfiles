@@ -38,6 +38,10 @@ Plugin 'Raimondi/delimitMate' 		" close brakets
 " react js
 Plugin 'mxw/vim-jsx'
 
+" svelte
+Plugin 'burner/vim-svelte'
+au BufRead,BufNewFile *.svelte set filetype=svelte
+
 " current theme
 Plugin 'arzg/vim-colors-xcode'
 
