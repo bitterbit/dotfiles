@@ -2,13 +2,23 @@
 
 # The PROMPT function is called whenever a prompt needs to be drawn. Docs: https://doc.redox-os.org/ion-manual/html/misc/06-prompt_fn.html
 fn PROMPT
-    let gitroot = $(git rev-parse --show-toplevel)
+    let found_ignore = 0
+    let starship_ignore = ${env::STARSHIP_IGNORE}
 
-    if test -e $PWD/.ionignore
-        basic_prompt
-    else if test $gitroot != "" && test -e $gitroot/.ionignore
-        basic_prompt
-    else
+    if test "$starship_ignore" != ""
+        for ignore in [@split($starship_ignore, ",")]
+            starts-with ${env::PWD} "$ignore"
+            let result = $?
+
+            if test $ignore != "" && test 0 == $result
+                basic_prompt
+                let found_ignore = 1
+                break
+            end
+        end
+    end
+
+    if test 0 == $found_ignore
         starship_prompt
     end
 end
