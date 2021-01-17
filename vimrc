@@ -38,6 +38,9 @@ Plugin 'Raimondi/delimitMate' 		" close brakets
 " react js
 Plugin 'mxw/vim-jsx'
 
+" svelte
+au! BufNewFile,BufRead *.svelte set ft=html
+
 " current theme
 Plugin 'arzg/vim-colors-xcode'
 
@@ -47,6 +50,7 @@ let g:jsx_ext_required = 0 	                    " allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and not jshint) for better jsx 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_config_file='.flake8'
+let g:syntastic_html_checkers = []
 
 " NERDTree and ctrlp ignore files
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__,node_modules
