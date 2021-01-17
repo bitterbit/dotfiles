@@ -30,6 +30,7 @@ plugins=(git)
 
   export GOPATH="$HOME/code/go"
   export GOBIN="$HOME/bin"
+  export PATH=$PATH:/usr/local/bin
   export PATH=$PATH:/usr/local/go/bin
   export PATH=$PATH:$GOPATH/bin
   export PATH=$PATH:"$HOME/Library/Android/sdk/platform-tools"
@@ -37,6 +38,7 @@ plugins=(git)
   export PATH=$PATH:"$HOME/.local/bin/"
 # export MANPATH="/usr/local/man:$MANPATH"
   export PATH=$PATH:$HOME/bin
+  export PATH=$PATH:$HOME/Library/Python/3.8/bin
 
   source $ZSH/oh-my-zsh.sh
 
@@ -68,6 +70,11 @@ export PATH=$PATH:$HOME/Library/Python/3.7/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/29.0.2
 export PATH=${PATH}:$HOME/.cargo/bin
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export NDK=/Users/gal/Library/Android/sdk/ndk/21.0.6113669
+
+source $HOME/.cargo/env
 
 alias ldd="otool -L"
 alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"

@@ -1,3 +1,4 @@
+set shell=/bin/bash " dont use system shell, always use bash
 set term=screen-256color
 set t_Co=256
 
@@ -43,6 +44,10 @@ au! BufNewFile,BufRead *.svelte set ft=html
 
 " current theme
 Plugin 'arzg/vim-colors-xcode'
+
+" Syntax highlight for reduxos/ion
+Plugin 'vmchale/ion-vim'
+
 
 " syntax
 let g:syntastic_check_on_open=1                     " syntastic lint file also on open and not only on close or save
