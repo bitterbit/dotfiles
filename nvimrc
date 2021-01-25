@@ -9,7 +9,10 @@ set shiftwidth=4
 set softtabstop=4
 
 set number relativenumber  " hybrid numbers
-set nu rnu
+
+" hide/show numbers in normal mode
+nmap <F3> :set nonumber norelativenumber<CR>
+nmap <F2> :set number relativenumber<CR>
 
 " syntax highlight
 syntax on
@@ -18,6 +21,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'arzg/vim-colors-xcode'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " xcode theme
@@ -35,21 +39,30 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " ~~ coc.nvim ~~
 " TextEdit might fail if hidden is not set.
 set hidden
-set cmdheight=2         " more space for error messages
+set cmdheight=1
 set updatetime=300
 set shortmess+=c        " Don't pass messages to |ins-completion-menu| 
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-" Use tab for trigger completion with characters ahead and navigate.
-noremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Search workspace symbols.
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+" Find symbol of current document.
+nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+" Do default action for next and prev item.
+nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 
-" Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <c-space> coc#refresh()
+
+" status line to show current file
+set statusline=
+set statusline+=%{coc#status()}
+set statusline+=
+set statusline+=\ %{&modified?'[+]':''}
+set statusline+=\ %f
+set statusline+=\:%l
+set statusline+=\ %{get(b:,'coc_current_function','')} " TODO why does this not work??
