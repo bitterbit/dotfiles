@@ -22,6 +22,10 @@ Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'arzg/vim-colors-xcode'
 Plug 'tpope/vim-commentary'
+Plug 'jremmen/vim-ripgrep'
+" Fuzzy Find
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " xcode theme
@@ -57,6 +61,8 @@ nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 
+" ~~ Fuzzy Find ctrl+p ~~
+nnoremap <C-p> :FZF<cr>
 
 " status line to show current file
 set statusline=
@@ -66,3 +72,4 @@ set statusline+=\ %{&modified?'[+]':''}
 set statusline+=\ %f
 set statusline+=\:%l
 set statusline+=\ %{get(b:,'coc_current_function','')} " TODO why does this not work??
+
