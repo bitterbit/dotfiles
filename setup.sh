@@ -15,6 +15,12 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     fi
 fi
 
+function setup_neovim {
+    mkdir -p ~/.config/nvim && ln -s ~/dotfiles/nvimrc ~/.config/nvim/init.vim
+    mkdir -p ~/.local/share/nvim/site/autoload/
+    wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O ~/.local/share/nvim/site/autoload/plug.vim
+}
+
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install zsh typewritter theme
@@ -34,10 +40,12 @@ mkdir -p ~/.config/ion
 ln -s ~/dotfiles/config.ion ~/.config/ion/initrc
 ln -s ~/dotfiles/starship.ion ~/.config/ion/starship.ion
 touch ~/.config/starship.toml
+setup_neovim
 
 # syntax checking for python
 pip3 install flake8 --user
 
 vim +PluginInstall +qall
+nvim +PlugInstall +qall
 
 echo "Done!"
