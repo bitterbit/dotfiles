@@ -61,6 +61,12 @@ nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 
+" COC format file
+command! -nargs=0 Format :call CocAction('format')
+" COC organize imports
+" TODO make this work, or at least understand what languages support this
+" command! -nargs=0 Imports :call CocAction('runCommand', 'editor.action.organizeImport') 
+
 " ~~ Fuzzy Find ctrl+p ~~
 nnoremap <C-p> :FZF<cr>
 
