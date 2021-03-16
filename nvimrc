@@ -26,6 +26,7 @@ Plug 'jremmen/vim-ripgrep'
 " Fuzzy Find
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'Valloric/MatchTagAlways'
 call plug#end()
 
 " xcode theme
