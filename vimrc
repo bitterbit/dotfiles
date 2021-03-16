@@ -16,6 +16,8 @@ Plugin 'altercation/vim-colors-solarized'
 
 " code enchancments
 Plugin 'scrooloose/syntastic'
+" Syntax highlight for reduxos/ion
+Plugin 'vmchale/ion-vim'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -28,7 +30,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ericbn/vim-relativize'
 set relativenumber
 
-Plugin 'aserebryakov/vim-todo-lists' " 'TODO' mode
+Plugin 'aserebryakov/vim-todo-lists' " TODO mode
 let g:VimTodoListsMoveItems = 0      " dont move done items to bottom
 
 " javascript
@@ -45,8 +47,6 @@ au! BufNewFile,BufRead *.svelte set ft=html
 " current theme
 Plugin 'arzg/vim-colors-xcode'
 
-" Syntax highlight for reduxos/ion
-Plugin 'vmchale/ion-vim'
 
 
 " syntax

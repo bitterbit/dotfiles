@@ -46,6 +46,14 @@ alias ldd="otool -L"
 alias tldr="$(which tldr) -s" # https://github.com/isacikgoz/tldr
 alias ls="ls -G"
 alias ll="ls -alG"
+alias rr="cat $HOME/.local/share/ion/history | fzf"
+
+let HISTORY_IGNORE = [ whitespace ]
+history +inc_append +shared
+
+keybindings vi
+
+export STARSHIP_IGNORE="/Users/gal/research/android/wechat/wechat-versions"
 
 # using cat and eval to declare the PROMPT func in the same context of the ion config script
 eval $(cat $HOME/.config/ion/starship.ion)
