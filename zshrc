@@ -70,6 +70,11 @@ export PATH=$PATH:$HOME/Library/Python/3.7/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/29.0.2
 export PATH=${PATH}:$HOME/.cargo/bin
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export NDK=/Users/gal/Library/Android/sdk/ndk/21.0.6113669
+
+source $HOME/.cargo/env
 
 alias ldd="otool -L"
 alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"
@@ -81,8 +86,9 @@ export EDITOR='vim'
 
 # added by travis gem
 [ -f /Users/gal/.travis/travis.sh ] && source /Users/gal/.travis/travis.sh
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export NDK=/Users/gal/Library/Android/sdk/ndk/21.0.6113669
 
-source $HOME/.cargo/env
-export PATH="/usr/local/opt/qt/bin:$PATH"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/gal/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gal/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/gal/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gal/google-cloud-sdk/completion.zsh.inc'; fi
