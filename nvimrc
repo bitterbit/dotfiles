@@ -47,6 +47,9 @@ set cmdheight=1
 set updatetime=300
 set shortmess+=c        " Don't pass messages to |ins-completion-menu| 
 
+" Map redo to shift+undo
+nnoremap U <C-r>
+
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
