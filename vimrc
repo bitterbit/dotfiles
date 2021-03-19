@@ -16,6 +16,8 @@ Plugin 'altercation/vim-colors-solarized'
 
 " code enchancments
 Plugin 'scrooloose/syntastic'
+" Syntax highlight for reduxos/ion
+Plugin 'vmchale/ion-vim'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -28,7 +30,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ericbn/vim-relativize'
 set relativenumber
 
-Plugin 'aserebryakov/vim-todo-lists' " 'TODO' mode
+Plugin 'aserebryakov/vim-todo-lists' " TODO mode
 let g:VimTodoListsMoveItems = 0      " dont move done items to bottom
 
 " javascript
@@ -46,8 +48,6 @@ au BufRead,BufNewFile *.svelte set filetype=svelte
 " current theme
 Plugin 'arzg/vim-colors-xcode'
 
-" Syntax highlight for reduxos/ion
-Plugin 'vmchale/ion-vim'
 
 
 " syntax
@@ -56,6 +56,7 @@ let g:jsx_ext_required = 0 	                    " allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']    " syntastic use eslint (and not jshint) for better jsx 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_config_file='.flake8'
+let g:syntastic_html_checkers = []
 
 " NERDTree and ctrlp ignore files
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,*.egg-info,__pycache__,node_modules

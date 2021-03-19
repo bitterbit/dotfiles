@@ -26,6 +26,7 @@ Plug 'jremmen/vim-ripgrep'
 " Fuzzy Find
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'Valloric/MatchTagAlways'
 call plug#end()
 
 " xcode theme
@@ -47,11 +48,19 @@ set cmdheight=1
 set updatetime=300
 set shortmess+=c        " Don't pass messages to |ins-completion-menu| 
 
+" Map redo to shift+undo
+nnoremap U <C-r>
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" Symbol renaming
+nmap <C-r> <Plug>(coc-rename)
 
 " Search workspace symbols.
 nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
@@ -61,8 +70,17 @@ nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 
+" COC format file
+command! -nargs=0 Format :call CocAction('format')
+" COC organize imports
+" TODO make this work, or at least understand what languages support this
+" command! -nargs=0 Imports :call CocAction('runCommand', 'editor.action.organizeImport') 
+
 " ~~ Fuzzy Find ctrl+p ~~
 nnoremap <C-p> :FZF<cr>
+
+" reload configuration shortcut
+nnoremap <C-s> :source $MYVIMRC<CR>
 
 " status line to show current file
 set statusline=

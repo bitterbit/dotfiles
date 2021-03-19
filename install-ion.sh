@@ -3,7 +3,7 @@
 # TODO: make sure rustup and rustc are installed
 
 TMPDIR=$(mktemp -d)
-cd $TMPDIR git clone https://gitlab.redox-os.org/redox-os/ion/
+cd $TMPDIR && git clone https://gitlab.redox-os.org/redox-os/ion/
 
 RUSTUP=0 make
 sudo cp target/release/ion /usr/local/bin
