@@ -42,7 +42,8 @@ Plugin 'Raimondi/delimitMate' 		" close brakets
 Plugin 'mxw/vim-jsx'
 
 " svelte
-au! BufNewFile,BufRead *.svelte set ft=html
+Plugin 'burner/vim-svelte'
+au BufRead,BufNewFile *.svelte set filetype=svelte
 
 " current theme
 Plugin 'arzg/vim-colors-xcode'
