@@ -45,7 +45,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " ~~ coc.nvim ~~
 " TextEdit might fail if hidden is not set.
-set hidden
+set hidden " allow moving to new buffer without saving current changes
 set cmdheight=1
 set updatetime=300
 set shortmess+=c        " Don't pass messages to |ins-completion-menu| 
