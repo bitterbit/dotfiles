@@ -23,6 +23,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'arzg/vim-colors-xcode'
 Plug 'tpope/vim-commentary'
 Plug 'jremmen/vim-ripgrep'
+Plug 'evanleck/vim-svelte'
+Plug 'pangloss/vim-javascript'
 " Fuzzy Find
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
