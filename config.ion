@@ -43,8 +43,9 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{n
 alias ldd="otool -L"
 #alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"
 alias tldr="$(which tldr) -s" # https://github.com/isacikgoz/tldr
-alias ls="ls -G"
-alias ll="ls -alG"
+alias ls="exa"
+# alias ls="ls -G"
+# alias ll="ls -alG"
 alias rr="cat $HOME/.local/share/ion/history | fzf"
 
 let HISTORY_IGNORE = [ whitespace ]
