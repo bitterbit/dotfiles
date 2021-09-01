@@ -25,6 +25,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jremmen/vim-ripgrep'
 Plug 'evanleck/vim-svelte'
 Plug 'pangloss/vim-javascript'
+Plug 'fatih/vim-go'
 " Fuzzy Find
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
