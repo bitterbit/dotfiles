@@ -1,28 +1,33 @@
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
 if [ "$TERM" = xterm ]; then TERM=xterm-256color; fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+# export ZSH=~/.oh-my-zsh
 
 # fix tilda and ± mixup in ubuntu vm and mac host
 # doesnt work in init for some reason, just save this 
 # snippet here for later need
 # setxkbmap -option apple:badmaps
 
-ZSH_THEME="typewritten" # https://github.com/reobin/typewritten
+# ZSH_THEME="typewritten" # https://github.com/reobin/typewritten
 
 # display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
 # User configuration
 
@@ -40,14 +45,7 @@ plugins=(git)
   export PATH=$PATH:$HOME/bin
   export PATH=$PATH:$HOME/Library/Python/3.8/bin
 
-  source $ZSH/oh-my-zsh.sh
-
-  export EDITOR='vim'
-
-  if [ -z "$TMUX" ]
-  then
-    tmux -u attach -t TMUX || tmux -u new -s TMUX
-  fi
+#  source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -68,19 +66,15 @@ export PATH=$PATH:$HOME/bin/
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PATH=$PATH:$HOME/Library/Python/3.7/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/29.0.2
 export PATH=${PATH}:$HOME/.cargo/bin
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/qt/bin:$PATH"
-export NDK=/Users/gal/Library/Android/sdk/ndk/21.0.6113669
 
 source $HOME/.cargo/env
 
-alias ldd="otool -L"
-alias gadb="/Applications/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/tools/adb"
+
 alias tldr="$(which tldr) -s" # https://github.com/isacikgoz/tldr
 
-export EDITOR='vim'
+export EDITOR='nvim'
 
 
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
@@ -93,3 +87,16 @@ if [ -f '/Users/gal/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gal/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/gal/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gal/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(starship init zsh)"
+fig source
+
+if [ -z "$TMUX" ]
+then
+	tmux -u attach -t TMUX || tmux -u new -s TMUX
+fi
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
