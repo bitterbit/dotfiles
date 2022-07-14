@@ -28,6 +28,10 @@ function setup_tools {
 
     # syntax checking for python
     pip3 install flake8 --user
+
+    # ctrl+r history search
+    brew install fzf
+    $(brew --prefix)/opt/fzf/install
 }
 
 # Create shortcuts to our dotfiles
