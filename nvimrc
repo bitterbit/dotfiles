@@ -51,6 +51,10 @@ set cmdheight=1
 set updatetime=300
 set shortmess+=c        " Don't pass messages to |ins-completion-menu| 
 
+" Use <cr> to confirm completion
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+
 " Map redo to shift+undo
 nnoremap U <C-r>
 

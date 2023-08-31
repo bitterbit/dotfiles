@@ -1,14 +1,8 @@
+alt_send_esc: false
 font:
   size: 14
-  regular:
+  normal:
     family: FiraCode Nerd Font
-    style: Regular
-  bold:
-    family: FiraCode Nerd Font
-    style: Bold 
-  italic:
-    family: FiraCode Nerd Font
-    style: Italic 
 
   use_thin_strokes: true
 #    regular:
@@ -43,3 +37,15 @@ colors:
     magenta: '0xff7ab2'
     cyan:    '0xb281eb' # LS Purple
     white:   '0xdfdfe0'
+
+key_bindings:
+    # Allow option+S, option+P
+  - { key: S, mods: Alt,  chars: "\x1bs"}
+  - { key: P, mods: Alt,  chars: "\x1bp"}
+    # Hack for tmux window switching
+  - { key: LBracket, mods: Command|Shift,  chars: "\x1b["}
+  - { key: RBracket, mods: Command|Shift,  chars: "\x1b]"}
+
+  - { key: Return, mods: Alt,  chars: "\x1bx"}
+
+    
